@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thrift Store for Kids</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discover Affordable Fashion for Kids!</h1>
+        <p>Thrifted treasures for every little adventurer.</p>
+        <div class="cta-buttons">
+          <button class="btn-primary">Shop Now</button>
+          <button class="btn-secondary">Explore Deals</button>
+        </div>
+      </div>
+      <div class="hero-animation">
+        <img src="shirt.png" alt="Floating Shirt" class="floating" />
+        <img src="shoes.png" alt="Floating Shoes" class="floating" />
+      </div>
+    </section>
+
+    <!-- Featured Categories Section -->
+    <section class="categories">
+      <h2>Shop by Category</h2>
+      <div class="category-grid">
+        <div class="card">Boys' Clothing</div>
+        <div class="card">Girls' Clothing</div>
+        <div class="card">Toys</div>
+        <div class="card">Shoes</div>
+        <div class="card">Accessories</div>
+      </div>
+    </section>
+
+    <!-- Popular Products Section -->
+    <section class="popular-products">
+      <h2>Trending Items</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide product-card shimmer">Product 1</div>
+          <div class="swiper-slide product-card shimmer">Product 2</div>
+          <div class="swiper-slide product-card shimmer">Product 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>Join Our Treasure Hunt for Deals!</p>
+      <div class="social-icons">
+        <img src="facebook-icon.png" alt="Facebook" class="icon" />
+        <img src="instagram-icon.png" alt="Instagram" class="icon" />
+      </div>
+    </footer>
+
+    <script>
+      // GSAP Floating Animation
+      gsap.to(".floating", {
+        y: "-20px",
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+      });
+
+      // Swiper Initialization
+      const swiper = new Swiper(".swiper-container", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

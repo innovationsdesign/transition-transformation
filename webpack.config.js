@@ -12,7 +12,22 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require("postcss-simple-vars"),
+                  require("autoprefixer"),
+                  require("postcss-nested"),
+                ],
+              },
+            },
+          },
+        ],
       },
     ],
   },
